@@ -77,7 +77,17 @@ import Teetar from "/src/assets/Teetar.png";
 import Highlight_03 from "/src/assets/Highlight_03.png";
 import { Link, useLocation } from "react-router-dom";
 
-const MainContent = ({ title1, title2, title3, description, customImage, customImage2 }) => {
+const MainContent = ({
+  title1,
+  title2,
+  title3,
+  description,
+  customImage,
+  customImage2,
+  customImage3,
+  customImage4,
+  customImage5,
+}) => {
   const location = useLocation("/Contact");
   return (
     <>
@@ -120,7 +130,14 @@ const MainContent = ({ title1, title2, title3, description, customImage, customI
       <div className="absolute bottom-0 left-1/2 md:left-auto transform md:transform-none -translate-x-1/2 md:right-0 md:bottom-0 z-30">
         {/* Uncomment the image tag if you want to add an image */}
         <img
-          src={customImage2 || customImage || Teetar}
+          src={
+            customImage5 ||
+            customImage4 ||
+            customImage3 ||
+            customImage2 ||
+            customImage ||
+            Teetar
+          }
           alt="Main Content Image"
           className="w-[259px] sm:w-[380px] md:w-[350px] lg:w-[643px]"
         />

@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import Line from "/src/assets/line-15.png";
 import MobileLine from "/src/assets/mobile-line.png";
 
-const Header = ({ title1, title2, title3, description, customImage, customImage2 }) => {
+const Header = ({ title1, title2, title3, description, customImage, customImage2, customImage3, customImage4, customImage5}) => {
   return (
     <>
       <div className=" bg-[#6374FD] sm:min-h-screen flex flex-wrap sm:h-auto w-full h-[500px] relative overflow-hidden">
@@ -35,6 +35,9 @@ const Header = ({ title1, title2, title3, description, customImage, customImage2
           description={description}
           customImage={customImage}
           customImage2={customImage2}
+          customImage3={customImage3}
+          customImage4={customImage4}
+          customImage5={customImage5}
           className=""
         />
       </div>

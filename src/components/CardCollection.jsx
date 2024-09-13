@@ -407,14 +407,14 @@
 // export default CardCollection;
 
 import React, { useEffect, useState } from "react";
-import CardCollection1 from "/src/assets/CardCollection1.png";
-import CardCollection2 from "/src/assets/CardCollection2.png";
-import CardCollection3 from "/src/assets/CardCollection3.png";
-import CardCollection4 from "/src/assets/CardCollection4.png";
-import CardCollection5 from "/src/assets/CardCollection5.png";
-import CardCollection6 from "/src/assets/CardCollection6.png";
-import CardCollection7 from "/src/assets/CardCollection7.png";
-import CardCollection8 from "/src/assets/CardCollection8.png";
+import CardCollection1 from "/src/assets/Jassu.png";
+import CardCollection2 from "/src/assets/Works_img2.png";
+import CardCollection3 from "/src/assets/Works_img3.png";
+import CardCollection4 from "/src/assets/Works_img4.png";
+import CardCollection5 from "/src/assets/Works_img5.png";
+import CardCollection6 from "/src/assets/Works_img6.png";
+import CardCollection7 from "/src/assets/Logo.png";
+import CardCollection8 from "/src/assets/Frame 1.png";
 import Highlight_04 from "/src/assets/Highlight_04.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -451,14 +451,14 @@ const CardCollection = () => {
   }, []);
 
   const cards = [
-    { src: CardCollection1, alt: "Logo 1", width: "w-24", height: "h-10" },
-    { src: CardCollection2, alt: "Logo 2", width: "w-12", height: "h-12" },
-    { src: CardCollection3, alt: "Logo 3", width: "w-19", height: "h-7" },
-    { src: CardCollection4, alt: "Logo 4", width: "w-12", height: "h-12" },
-    { src: CardCollection5, alt: "Logo 5", width: "w-12", height: "h-12" },
-    { src: CardCollection6, alt: "Logo 6", width: "w-24", height: "h-10" },
-    { src: CardCollection7, alt: "Logo 7", width: "w-12", height: "h-12" },
-    { src: CardCollection8, alt: "Logo 8", width: "w-12", height: "h-12" },
+    { src: CardCollection1, alt: "Logo 1", width: "w-28", height: "h-auto" },
+    { src: CardCollection2, alt: "Logo 2", width: "w-36", height: "h-auto" },
+    { src: CardCollection3, alt: "Logo 3", width: "w-32", height: "h-auto" },
+    { src: CardCollection4, alt: "Logo 4", width: "w-28", height: "h-auto" },
+    { src: CardCollection5, alt: "Logo 5", width: "w-28", height: "h-auto" },
+    { src: CardCollection6, alt: "Logo 6", width: "w-28", height: "h-auto" },
+    { src: CardCollection7, alt: "Logo 7", width: "w-36", height: "h-auto" },
+    { src: CardCollection8, alt: "Logo 8", width: "w-36", height: "h-auto" },
   ];
 
   return (

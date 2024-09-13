@@ -14,6 +14,9 @@ import LocationMap from "./components/LocationMap";
 import WorksNew from "./pages/WorksNew";
 import WorksNewImage from "/src/assets/Works.png";
 import CareerNewImage from "/src/assets/Career.png";
+import ServicesNewImage from "/src/assets/Service Page.png";
+import ContactImage from "/src/assets/Contact US.png";
+import ClientImage from "/src/assets/Group 41.png";
 import ServicesNew from "./pages/ServicesNew";
 
 // Layout component
@@ -26,6 +29,9 @@ const Layout = ({
   isServiceOrContactPage,
   customImage,
   customImage2,
+  customImage3,
+  customImage4,
+  customImage5,
 }) => (
   <>
     <Header
@@ -34,6 +40,9 @@ const Layout = ({
       title3={title3}
       customImage={customImage}
       customImage2={customImage2}
+      customImage3={customImage3}
+      customImage4={customImage4}
+      customImage5={customImage5}
       description={description}
     />
     {children}
@@ -54,7 +63,7 @@ const RoutesExample = () => {
 
   // Check if the route is Services or Contact
   const isServiceOrContactPage =
-    location.pathname === "/Services" || location.pathname === "/Contact";
+    location.pathname === "/Services";
 
   return (
     <>
@@ -72,6 +81,7 @@ const RoutesExample = () => {
               title3="right now"
               description="From building social media strategies to Influencer Marketing, We offer a wide range of services that solve every problem!"
               isServiceOrContactPage={isServiceOrContactPage}
+              customImage3={ServicesNewImage}
             >
               {/* <Services /> */}
               <ServicesNew />
@@ -88,8 +98,10 @@ const RoutesExample = () => {
               title3="something new!"
               description="Get in touch with us today! Our team is ready to answer your questions and provide personalized assistance. Contact us through the form below!"
               isServiceOrContactPage={isServiceOrContactPage}
+              customImage4={ContactImage}
             >
-              <ContactPage />
+              {/* <ContactPage /> */}
+              <ContactContainer contactDesc="We value your input and are committed to providing excellent customer service. Reach out to us!" />
             </Layout>
           }
         />
@@ -119,7 +131,7 @@ const RoutesExample = () => {
               title2="Clients"
               title3=""
               description="Welcome to our Clients page, where we celebrate the trust and collaboration that drive our success. Through our services, We are proud to support our clients in achieving their goals with dedication and excellence."
-              
+              customImage5={ClientImage}
             >
               <Works />
               <ContactContainer contactDesc="We value your input and are committed to providing excellent customer service. Reach out to us!" />
