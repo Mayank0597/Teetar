@@ -1,0 +1,168 @@
+Routes.jsx
+import Teetar from "/src/assets/Teetar.png"; // Home Page Image
+import ServicesImage from "/src/assets/ServicesImage.png"; // Services Page Image
+import ContactImage from "/src/assets/ContactImage.png"; // Contact Page Image
+import CareerImage from "/src/assets/CareerImage.png"; // Career Page Image
+import WorksImage from "/src/assets/WorksImage.png"; // Works Page Image
+
+const RoutesExample = () => {
+  const [loading, setLoading] = useState(false);
+  const location = useLocation();
+  
+  useEffect(() => {
+    setLoading(true);
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, [location]);
+
+  const isServiceOrContactPage = location.pathname === "/Services" || location.pathname === "/Contact";
+
+  return (
+    <>
+      <ScrollToTop />
+      {loading && <Loader />}
+      <Routes>
+        <Route path="/" element={
+          <Layout
+            title1="Services we are"
+            title2="offering"
+            title3="right now"
+            isServiceOrContactPage={isServiceOrContactPage}
+            imageSrc={Teetar} // Pass Teetar image for HomePage
+          >
+            <HomePage />
+          </Layout>
+        } />
+
+        <Route path="/Services" element={
+          <Layout
+            title1="Services we are"
+            title2="offering"
+            title3="right now"
+            isServiceOrContactPage={isServiceOrContactPage}
+            imageSrc={ServicesImage} // Pass a unique image for Services page
+          >
+            <Services />
+          </Layout>
+        } />
+
+        <Route path="/Contact" element={
+          <Layout
+            title1="Let's connect &"
+            title2="start"
+            title3="something new!"
+            isServiceOrContactPage={isServiceOrContactPage}
+            imageSrc={ContactImage} // Pass a unique image for Contact page
+          >
+            <ContactPage />
+          </Layout>
+        } />
+
+        <Route path="/Career" element={
+          <Layout
+            title1="Explore Career"
+            title2="opportunities"
+            title3="with us"
+            imageSrc={CareerImage} // Pass a unique image for Career page
+          >
+            <Career />
+            <ContactContainer />
+          </Layout>
+        } />
+
+        <Route path="/Works" element={
+          <Layout
+            title1="What"
+            title2="we've done"
+            title3="so far"
+            imageSrc={WorksImage} // Pass a unique image for Works page
+          >
+            <Works />
+            <ContactContainer />
+          </Layout>
+        } />
+      </Routes>
+    </>
+  );
+};
+
+export default RoutesExample;
+
+Header.jsx
+const Header = ({ title1, title2, title3, imageSrc }) => {
+  return (
+    <div className=" bg-[#6374FD] sm:min-h-screen flex flex-wrap sm:h-auto w-full h-[500px] relative overflow-hidden">
+      <img
+        src={Line}
+        alt="Background element"
+        className="absolute z-20 top-0 w-full h-auto max-h-screen object-cover transform translate-x-[15%] pointer-events-none hidden sm:block"
+      />
+      <img
+        src={MobileLine}
+        alt="Background element"
+        className="absolute z-20 top-0 w-full h-auto max-h-screen object-cover pointer-events-none sm:hidden"
+      />
+      <Navbar />
+      <hr className="absolute z-30 top-24 border-white mb-4 hidden md:block w-full " />
+      <MainContent
+        title1={title1}
+        title2={title2}
+        title3={title3}
+        imageSrc={imageSrc}  // Pass the image source to MainContent
+      />
+    </div>
+  );
+};
+
+export default Header;
+
+
+MainContent.jsx
+const MainContent = ({ title1, title2, title3, imageSrc }) => {
+  const location = useLocation();
+  return (
+    <>
+      <div className="absolute text-left sm:ml-16 ml-6 md:text-left md:w-[555px] lg:mt-56 md:mt-32 mt-16 z-30">
+        <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-5xl font-semibold text-white sm:w-[42vw] leading-tight sm:mt-0 mt-6 -mb-5 mr-10 sm:mr-0">
+          <div className="flex flex-wrap w-full">
+            <img
+              src={Highlight_03}
+              alt="Inline Image"
+              className="w-12 h-auto sm:ml-[88%] hidden sm:block"
+              style={{ marginTop: "-2rem" }}
+            />
+          </div>
+          <div className="">
+            {title1} <span className="text-[#FCCB30]">{title2}</span> {title3}
+          </div>
+        </h1>
+        <p className="text-white mt-4 sm:text-xs z-0 text-sm md:text-base lg:text-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+          Vestibulum vehicula ex ac dolor aliquet, at sodales ex hendrerit.
+        </p>
+        <br />
+        {location.pathname !== "/Contact" && (
+          <Link to="/Contact">
+            <button className="bg-[#FCCB30] text-black px-4 py-2 rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+              Contact
+            </button>
+          </Link>
+        )}
+      </div>
+
+      {/* Image section */}
+      <div className="absolute bottom-0 left-1/2 md:left-auto transform md:transform-none -translate-x-1/2 md:right-0 md:bottom-0 z-30">
+        <img
+          src={imageSrc}
+          alt="Page-specific Image"
+          className="w-[259px] sm:w-[380px] md:w-[350px] lg:w-[643px]" // Adjust width for responsiveness
+        />
+      </div>
+    </>
+  );
+};
+
+export default MainContent;
+
