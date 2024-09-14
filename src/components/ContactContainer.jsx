@@ -185,7 +185,7 @@ const ContactContainer = ({ contactDesc }) => {
 
   return (
     <div className="flex justify-center items-center -mb-28 z-10 mt-20">
-      <div className="relative sm:w-[90%] sm:max-w-[1136px]">
+      <div className="relative sm:w-[90%] sm:max-w-[1000px]">
         {/* Responsive Image */}
         <img
           src={isBigScreen ? squareImage : smallImage}

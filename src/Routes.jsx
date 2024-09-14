@@ -16,7 +16,7 @@ import WorksNewImage from "/src/assets/Works.png";
 import CareerNewImage from "/src/assets/Career.png";
 import ServicesNewImage from "/src/assets/Service Page.png";
 import ContactImage from "/src/assets/Contact US.png";
-import ClientImage from "/src/assets/Group 41.png";
+import ClientImage from "/src/assets/Cliental.png";
 import ServicesNew from "./pages/ServicesNew";
 
 // Layout component
