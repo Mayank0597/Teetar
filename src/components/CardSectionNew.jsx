@@ -14,7 +14,7 @@ const CardSectionNew = () => {
       <img
         src={vectorYellow}
         alt="Vector Background"
-        className="absolute inset-0 mx-auto sm:w-1/2 w-[400%] sm:h-auto z-0 transform translate-x-[-50%] translate-y-[-50%]"
+        className="absolute inset-0 mx-auto sm:w-1/2 w-[50%]  sm:h-auto z-0 transform translate-x-[-50%] translate-y-[-50%]"
         style={{ top: "50%", left: "50%" }}
       />
 

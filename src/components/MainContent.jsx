@@ -139,7 +139,7 @@ const MainContent = ({
             Teetar
           }
           alt="Main Content Image"
-          className="w-[259px] sm:w-[380px] md:w-[350px] lg:w-[643px]"
+          className="w-[259px] sm:w-[380px] md:w-[350px] lg:w-[430px] xl:w-[643px]"
         />
       </div>
       {/* </div> */}

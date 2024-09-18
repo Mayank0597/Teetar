@@ -255,13 +255,18 @@ const Footer = ({ isServiceOrContactPage }) => {
             <h3 className="text-lg font-bold mb-2 sm:mb-4">Contact Us</h3>
             <address>
               <p className="">Sampark Infoways</p>
-              <p className="">C/o The BOARDROOM Co-working</p>
+              {/* <p className="">C/o The BOARDROOM Co-working</p>
               <p className="">Modi House, 1st Floor</p>
               <p className="">Off-link Road, Andheri(W)</p>
-              <p>Mumbai-400053</p>
+              <p>Mumbai-400053</p> */}
+              <p className="">Building No. N/2</p>
+              <p className="">Avanti Vihar, Shankar Nagar</p>
+              <p className="">Raipur, Chhattisgarh</p>
+              <p>492001</p>
               <p>
                 <Link
-                  to="https://maps.app.goo.gl/MyAMSg9NhScJzqnV9"
+                  // to="https://maps.app.goo.gl/MyAMSg9NhScJzqnV9"
+                  to="https://maps.app.goo.gl/DtrRSyUVsrXx7KNx6"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-400"
